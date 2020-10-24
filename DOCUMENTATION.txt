@@ -1,0 +1,36 @@
+FRONTEND
+Frontend for this project has been done with Angular and bootstrap.
+Consists of 3 components
+
+	1.Navbar: To navigate between upload page and gallery page
+	
+	2.Gallery: Shows the images in the server in a gallery form.
+		Uses API call to retrieve image details from server.
+		When an image is clicked, new view pops up showing description.
+	
+	3.Upload: Consist of a form of 3 fields-Image title, image description and image file upload
+		When form is submitted, data is sent to server using API call.
+		Image is stored in server file system and image details are stored in sql database.
+
+BACKEND
+Backend for this project has been done using Python's flask framework to create API.
+Uses sqlite package to create database.
+
+Backend handles two API calls
+
+	1.API call to api/imglist using GET method invokes the sendImgList() function.
+	The api queries the image database for details and sends them as JSON file to front-end.
+	
+	2.API call to api/uploadimage using POST method invokes the uploadImage() function.
+	Details of the image that was passed to the API is extracted.
+	Title, Description and a uniquely generated filename for the image is stored in Database.
+	The image file is stored in server file system
+	
+	  		
+
+
+
+		
+		
+	
+	

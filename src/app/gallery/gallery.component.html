@@ -1,0 +1,29 @@
+<br>
+<!--Main Display portion only activated when imgActive == True-->
+<div class="container-fluid bg-secondary border border-primary sticky-top" *ngIf="imgActive">  
+    <div class="row align-items-center text-center text-lg-left">
+        <div class="col-sm-6 text-center">
+            <img class="img-fluid" src="/assets/API/gallery-images/{{activeImage.name}}">
+        </div>
+        <div class="col-md-6">
+            <div>{{ activeImage.title }}</div>
+            <div>{{ activeImage.description }}</div>
+            <br><br>      
+            <button (click)="imgActive=!imgActive" class="btn btn-primary">Close</button>             
+    </div>
+</div>
+</div>
+<br>
+<!--This contained displays all the images by looping through imgList2. Clicking any img will activate main display-->
+<div class="container-fluid">  
+    <div class="row text-center align-items-center text-lg-left">  
+      <div class="col-lg-2 col-md-3 col-6"  *ngFor="let i of imgList2">
+        <a (click)="imgSelected(i)" class="d-block mb-4 h-100">
+            <figure class="figure">
+                <img src="/assets/API/gallery-images/{{i.name}}" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">{{ i.title }}</figcaption>
+            </figure>
+        </a>
+      </div>
+    </div>
+</div>

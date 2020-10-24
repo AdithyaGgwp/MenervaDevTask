@@ -1,0 +1,29 @@
+===========================================================
+Installing modules
+
+Inside project folder, execute the following command
+	npm install
+
+============================================================
+
+Starting Back End(Python3 Required)
+
+1. In terminal, from project folder, navigate to src/assets/API
+
+2. Run the following commands
+	a)env\Scripts\activate
+	b)set FLASK_APP=API.py
+	c)flask run
+
+3. Now the backend is running at localhost:5000
+
+============================================================
+
+Starting front end
+
+Inside the root folder, execute the following command
+	ng serve
+Now the frontend is active and can be accessed at localhost:4200
+
+============================================================
+

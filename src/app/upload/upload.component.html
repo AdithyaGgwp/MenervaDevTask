@@ -1,0 +1,29 @@
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col"></div>   
+        <div class="col-xs-10 col-sm-8 col-md-6 col-lg-4 border border-primary rounded"><br>
+            <form enctype="multipart/form-data" method=POST>
+                <div class="form-group">
+                    <label>Image title</label>
+                    <input #title type="text" class="form-control" name="title" placeholder="Enter image title here">
+                </div>
+                <div class="form-group">
+                    <label>Image Description</label>
+                    <textarea #description class="form-control" name="description" placeholder="Enter description for image" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Image to upload</label>
+                    <input (change)="onFileChange($event)" type="file" accept="image/*" name="image" class="form-control-file">
+                </div>
+                <br>
+                <br>
+                <div class="text-center">
+                    <button (click)="onSubmit(title,description)" type="button" class="text-center btn btn-primary">Upload Image</button>
+                </div>
+            </form>            
+            <br>
+        </div>
+        <div class="col"></div>
+    </div>
+  </div>
